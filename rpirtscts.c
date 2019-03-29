@@ -94,6 +94,7 @@ int rpi_gpio_header_type() {
 	case 0x000011: // Compute Module 1
 	case 0x000014: // Compute Module 1
 	case 0xa020a0: // Compute Module 3
+	case 0xa02100: // Compute Module 3+
 		fprintf(stderr, "compute module not supported\n");
 		exit(EXIT_FAILURE);
 	case 0x000010: // Model B+ Rev 1.0
@@ -113,6 +114,7 @@ int rpi_gpio_header_type() {
 	case 0xa22042: // Pi 2 Model B Rev 1.2
 	case 0xa22082: // Pi 3 Model B Rev 1.2
 	case 0xa32082: // Pi 3 Model B Rev 1.2
+	case 0xa020d3: // Pi 3 Model B+ Rev 1.3
 		printf("40-pin GPIO header detected\n");
 		return GPIO_header_40;
 	default:
